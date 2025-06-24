@@ -1,7 +1,6 @@
 import React from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-// SVG Icons for social links
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
     <path

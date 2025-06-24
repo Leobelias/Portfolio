@@ -94,7 +94,6 @@ p {
   }
 }
 
-// Headings
 .heading {
   &--xl {
     font-size: $font-size-4xl;
@@ -150,7 +149,6 @@ p {
   }
 }
 
-// Text styles
 .text {
   &--lg {
     font-size: $font-size-lg;
@@ -188,7 +186,6 @@ p {
   }
 }
 
-// Links
 .link {
   position: relative;
   color: $primary-color;
@@ -235,7 +232,6 @@ p {
   }
 }
 
-// Lists
 .list {
   &--styled {
     list-style: none;
@@ -267,7 +263,6 @@ p {
   }
 }
 
-// Utility classes
 .text-center {
   text-align: center;
 }

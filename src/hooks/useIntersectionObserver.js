@@ -7,7 +7,10 @@ const useIntersectionObserver = (options = {}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
       },
       {
         threshold: options.threshold || 0.1,

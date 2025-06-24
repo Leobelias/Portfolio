@@ -1,5 +1,3 @@
-// About styles will go here
-
 .about {
   position: relative;
   overflow: hidden;
@@ -23,10 +21,6 @@
   &__content {
     position: relative;
     z-index: 1;
-
-    &.active {
-      // This class is now added from JS to trigger children animations
-    }
   }
 
   &__text {
@@ -55,10 +49,6 @@
     .btn {
       padding: $spacing-sm $spacing-xl;
     }
-
-    .link {
-      font-weight: 500;
-    }
   }
 
   @media (max-width: $tablet-width) {
@@ -66,10 +56,6 @@
       width: 400px;
       height: 400px;
       right: -50%;
-    }
-
-    &__cta {
-      justify-content: center;
     }
   }
 }

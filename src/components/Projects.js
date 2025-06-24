@@ -8,7 +8,7 @@ const featuredProjects = [
     description:
       "Une application web (single-page app React) pour la location d'appartements, similaire à Airbnb. Les utilisateurs peuvent parcourir les annonces, voir les détails et les photos de chaque appartement, et lire les avis. Construite avec React, React Router et Sass, l'application comprend des composants personnalisés comme des menus déroulants pour les détails et un carrousel pour les images. Elle est entièrement responsive et a été créée à partir de maquettes Figma.",
     tech: ["React", "Sass", "React Router", "Responsive Design"],
-    liveLink: "#",
+    liveLink: "https://kasaoc.netlify.app/",
     codeLink: "https://github.com/Leobelias/Kasa",
   },
   {
@@ -17,7 +17,7 @@ const featuredProjects = [
     description:
       "Un site web responsive pour une agence de voyage fictive qui permet aux utilisateurs de trouver des hébergements et des activités de vacances. Construit avec HTML5 & CSS3, il dispose d'une interface utilisateur épurée avec des filtres de recherche. Ce projet m'a appris les bases du design web responsive et du HTML sémantique.",
     tech: ["HTML5", "CSS3", "Responsive Design", "Semantic HTML"],
-    liveLink: "#",
+    liveLink: "https://bookiocr.netlify.app/",
     codeLink: "https://github.com/Leobelias/OpenclassroomsProject.git",
   },
 ];
@@ -35,14 +35,14 @@ const otherProjects = [
     description:
       "Débogage et optimisation des performances, du SEO et de l'accessibilité. Amélioration des scores Lighthouse, implémentation du balisage Schema.org et optimisation des stratégies de chargement d'images.",
     tech: ["SEO", "Performance", "Accessibility"],
-    codeLink: "#",
+    codeLink: "https://github.com/Leobelias/Nina-Carducci-Dev-master",
   },
   {
     title: "Mon Vieux Grimoire - API d'évaluation de livres",
     description:
       "Une API RESTful sécurisée pour une application d'évaluation de livres, construite avec Node.js, Express et MongoDB. Comprend une authentification utilisateur, le téléversement d'images et un système de notation.",
     tech: ["Node.js", "Express", "MongoDB"],
-    codeLink: "git@github.com:Leobelias/grimoiresp7.git",
+    codeLink: "https://github.com/Leobelias/grimoiresp7",
   },
 ];
 
@@ -92,6 +92,14 @@ const Projects = () => {
                   ))}
                 </ul>
                 <div className="project-card__links">
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--outline animate--slide-right delay-2"
+                  >
+                    Voir la Démo
+                  </a>
                   <a
                     href={project.codeLink}
                     target="_blank"
