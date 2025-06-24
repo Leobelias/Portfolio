@@ -1,7 +1,5 @@
 import React from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-// I will assume there is an image in assets. I'll add a placeholder for now.
-// import profileImage from '../../assets/images/profile.jpg';
 
 const About = () => {
   const [sectionRef, isVisible] = useIntersectionObserver({
@@ -21,7 +19,7 @@ const About = () => {
           <div className="about__text">
             <p className="text--lg">
               J’ai commencé mon parcours en licence d’anglais (LLCER), avant de
-              me tourner vers le marketing d’influence digitale. Pendant
+              me diriger vers le marketing d’influence digitale. Pendant
               plusieurs années, j’ai travaillé en agence avec des créateurs de
               contenu et des marques, en coordonnant des campagnes et des
               partenariats.
