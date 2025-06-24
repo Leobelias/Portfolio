@@ -1,0 +1,114 @@
+// Skills styles will go here
+
+.skills {
+  background-color: $bg-white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba($accent-color, 0.1) 0%,
+      rgba($accent-color, 0) 70%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+    margin-top: $spacing-2xl;
+  }
+
+  &__item {
+    background: $glass-bg;
+    backdrop-filter: blur(10px);
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    border: $glass-border;
+    box-shadow: $glass-shadow;
+    text-align: center;
+    transition: $transition-smooth;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(white, 0.95);
+
+      .skills__icon {
+        color: $primary-color;
+        transform: scale(1.1);
+      }
+    }
+
+    // Staggered animation on load
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        animation: fadeIn 0.5s ease-out forwards;
+        animation-delay: $i * 0.1s;
+      }
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto $spacing-md;
+    color: $text-light;
+    transition: $transition-smooth;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    margin-bottom: $spacing-sm;
+    color: $text-color;
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    color: $text-light;
+    line-height: $line-height-base;
+  }
+
+  @media (max-width: $tablet-width) {
+    &__list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $spacing-lg;
+      padding: 0 $spacing-md;
+    }
+
+    &__item {
+      padding: $spacing-lg;
+    }
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: $spacing-sm;
+    }
+
+    &__title {
+      font-size: $font-size-base;
+    }
+
+    &__description {
+      font-size: $font-size-sm;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+// Contact styles will go here
+
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba($accent-color, 0.1) 0%,
+      rgba($accent-color, 0) 70%
+    );
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &__intro {
+    max-width: 600px;
+    margin: 0 auto $spacing-2xl;
+  }
+
+  &__info-container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: $spacing-2xl auto 0;
+    padding: $spacing-xl;
+    background: $glass-bg;
+    backdrop-filter: blur(10px);
+    border: $glass-border;
+    border-radius: $border-radius-lg;
+    box-shadow: $glass-shadow;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    text-align: center;
+  }
+
+  &__info-item {
+    // container for title and link/socials
+  }
+
+  &__info-title {
+    font-size: $font-size-base;
+    color: $text-light;
+    margin-bottom: $spacing-sm;
+    font-weight: 500;
+  }
+
+  &__info-link {
+    font-size: $font-size-lg;
+    color: $text-color;
+    font-weight: 600;
+    transition: $transition-smooth;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-xl;
+  }
+
+  &__social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $text-color;
+    transition: $transition-smooth;
+    font-size: $font-size-sm;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      transition: $transition-smooth;
+    }
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+
+      svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

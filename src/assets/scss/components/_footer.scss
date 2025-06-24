@@ -1,0 +1,92 @@
+// Footer styles will go here
+
+.footer {
+  padding: $spacing-xl 0;
+  background: rgba($bg-dark, 0.98);
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(white, 0.1),
+      transparent
+    );
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-xl;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__brand {
+    flex: 1;
+  }
+
+  &__signature {
+    font-size: $font-size-lg;
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+    opacity: 0.9;
+
+    .text-gradient {
+      background: linear-gradient(135deg, $primary-color, $accent-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__copyright {
+    color: rgba(white, 0.6);
+    font-size: $font-size-sm;
+  }
+
+  &__social {
+    display: flex;
+    gap: $spacing-md;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius-full;
+    background: rgba(white, 0.1);
+    color: white;
+    transition: $transition-smooth;
+
+    &:hover {
+      background: rgba(white, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

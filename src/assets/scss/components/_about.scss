@@ -1,0 +1,75 @@
+// About styles will go here
+
+.about {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba($accent-color, 0.1) 0%,
+      rgba($accent-color, 0) 70%
+    );
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    &.active {
+      // This class is now added from JS to trigger children animations
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      margin-bottom: $spacing-lg;
+      color: $text-color;
+
+      &:first-of-type {
+        font-size: $font-size-lg;
+        color: $text-light;
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-lg;
+    margin-top: $spacing-2xl;
+
+    .btn {
+      padding: $spacing-sm $spacing-xl;
+    }
+
+    .link {
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &::before {
+      width: 400px;
+      height: 400px;
+      right: -50%;
+    }
+
+    &__cta {
+      justify-content: center;
+    }
+  }
+}
