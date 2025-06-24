@@ -13,7 +13,7 @@ const featuredProjects = [
   },
   {
     title: "Booki - Site de réservation de vacances",
-    image: "/assets/booki.svg",
+    image: "/assets/Booki.svg",
     description:
       "Un site web responsive pour une agence de voyage fictive qui permet aux utilisateurs de trouver des hébergements et des activités de vacances. Construit avec HTML5 & CSS3, il dispose d'une interface utilisateur épurée avec des filtres de recherche. Ce projet m'a appris les bases du design web responsive et du HTML sémantique.",
     tech: ["HTML5", "CSS3", "Responsive Design", "Semantic HTML"],
