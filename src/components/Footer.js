@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-gradient">React & Sass</span>
             </p>
             <p className="footer__copyright">
-              &copy; {currentYear} Léo Belias. Tous droits réservés.
+              &copy; {currentYear} Léo Blaise. Tous droits réservés.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/leo-belias"
+              href="https://linkedin.com/in/leoblaise"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__link"
@@ -68,7 +68,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="mailto:leo.belias@example.com"
+              href="mailto:leoblaise14@gmail.com"
               className="footer__link"
               aria-label="Email"
             >
